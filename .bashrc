@@ -125,6 +125,9 @@ alias pull='git pull --rebase --autostash'
 alias push='git push'
 alias rebase='git rebase --autostash'
 alias add='git add'
+commit() {
+    git commit -m "$1"
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
