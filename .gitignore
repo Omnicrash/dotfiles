@@ -1,10 +1,12 @@
 # Exclude everything in root by default
 /*
 
-# Repo settings
+# Repo
 !.gitignore
 !.gitmodules
+!docs/
 
+# Dotfiles
 !.bashrc
 !.dircolors
 !.gitconfig
@@ -16,6 +18,9 @@
 !.Xdefaults
 !.XWinrc
 
-!bin/
+# Extensions
 !.urxvt/ext/
 !.tmux/
+
+# Scripts
+!bin/
