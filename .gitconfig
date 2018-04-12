@@ -1,0 +1,11 @@
+[user]
+    email = yve@omnicrash.net
+    name = Yve Verstrepen
+[push]
+	default = current
+[alias]
+    autoclean = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+    update = pull --rebase --autostash
+    updev = rebase develop --autostash
+[log]
+	decorate = auto

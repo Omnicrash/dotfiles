@@ -1,0 +1,149 @@
+URxvt.termName: rxvt-256color
+URxvt*loginShell: true
+
+! Disable unicode input & picture insert mode
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! Scrollback
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+URxvt.secondaryWheel: 1
+
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+
+URxvt*skipScroll: false
+
+! Extensions
+!URxvt.perl-ext-common: clipboard,url-select,keyboard-select
+!URxvt.perl-ext:
+URxvt.perl-ext-common: default,matcher,keyboard-select
+
+! URL matching
+URxvt.matcher.button: 1
+URxvt.url-launcher: web
+URxvt.matcher.rend.0: Uline fg12
+
+!URxvt.keysym.F11: perl:fullscreen:switch
+
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard 
+!URxvt.keysym.M-v: perl:clipboard:paste_escaped
+
+!URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-s: perl:keyboard-select:activate
+!URxvt.keysym.M-s: perl:keyboard-select:search
+
+! Make fonts look nice
+!Xft.autohint: false
+!Xft.dpi: 96
+!Xft.antialias: false
+!Xft.rgba: rgb
+!Xft.hinting: false
+!Xft.hintstyle: hintslight
+!Xft.lcdfilter: lcddefault
+
+! Terminal theme
+urxvt.title: Terminal
+
+URxvt.geometry: 160x48
+
+!URxvt.colorUL: #a6e22e
+
+URxvt.scrollBar: false
+URxvt.scrollstyle: plain
+URxvt.scrollBar_right: true
+
+URxvt.cursorBlink: false
+URxvt.cursorUnderline: false
+!URxvt.cursorColor: #657b83
+
+URxvt.pointerBlank: true
+
+*font: -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
+*boldFont: -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt.allow_bold: false
+
+URxvt.buffered: false
+URxvt.depth: 32
+
+URxvt.transparent: false
+URxvt.inheritPixmap: false
+!URxvt.shading: 25
+
+!*foreground: gray
+!*background: black
+!URxvt.background: [75]#000000
+
+!Scratchpad.foreground: white
+!Scratchpad.background: [75]#000033
+
+! Black
+!*color0: #000000
+!*color8: #555555
+! Red
+!*color1: #AA0000
+!*color9: #FF5555
+! Green
+!*color2: #00AA00
+!*color10: #55FF55
+! Yellow
+*color3: #F5871F
+*color11: #FFC66D
+! Blue
+!*color4: #0000AA
+!*color12: #5555FF
+! Magenta
+!*color5: #AA00AA
+!*color13: #FF55FF
+! Cyan
+!*color6: #00AAAA
+!*color14: #55FFFF
+! White
+!*color7: #AAAAAA
+!*color15: #FFFFFF
+
+*fading: 10
+*fadeColor: #272822
+!*cursorColor: #93a1a1
+!*pointerColorBackground: #586e75
+!*pointerColorForeground: #93a1a1
+
+! Base16 Monokai
+! Scheme: Wimer Hazenberg (http://www.monokai.nl)
+
+*background:                     #272822
+*foreground:                     #f8f8f2
+URxvt*cursorColor:               #f8f8f2
+
+URxvt*scrollColor:               #f8f8f2
+!URxvt*highlightColor:           #49483e
+URxvt*highlightColor:            #214283
+!URxvt*highlightTextColor:        #a59f85
+
+*color0:                         #272822
+*color1:                         #f92672
+*color2:                         #a6e22e
+!*color3:                         #f4bf75
+*color4:                         #66d9ef
+*color5:                         #ae81ff
+*color6:                         #a1efe4
+*color7:                         #f8f8f2
+*color8:                         #75715e
+*color9:                         #f92672
+*color10:                        #a6e22e
+!*color11:                        #f4bf75
+*color12:                        #66d9ef
+*color13:                        #ae81ff
+*color14:                        #a1efe4
+*color15:                        #f9f8f5
+
+*color16:                        #fd971f
+*color17:                        #cc6633
+*color18:                        #383830
+*color19:                        #49483e
+*color20:                        #a59f85
+*color21:                        #f5f4f1

@@ -1,0 +1,17 @@
+*
+!*/
+
+!.gitignore
+!.bashrc
+!.dircolors
+!.gitconfig
+!.inputrc
+!.nanorc
+!.profile
+!.tmux.conf
+!.Xresources
+!.Xdefaults
+!.XWinrc
+
+!bin/*
+!.urxvt/ext/*

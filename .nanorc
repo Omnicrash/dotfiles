@@ -1,0 +1,8 @@
+unset mouse
+set nowrap
+set const
+set nohelp
+set suspend
+set tabstospaces
+set tabsize 4
+#set undo
