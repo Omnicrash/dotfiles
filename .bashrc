@@ -124,7 +124,16 @@ alias log='git log --graph --decorate --abbrev-commit'
 alias pull='git pull --rebase --autostash'
 alias push='git push'
 alias rebase='git rebase --autostash'
-alias add='git add'
+alias status='git status'
+
+add() {
+    if [ -z "$1" ]; then
+        git add .
+    else
+        git add $1
+    fi
+}
+
 commit() {
     git commit -m "$1"
 }
