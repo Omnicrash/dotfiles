@@ -1,3 +1,3 @@
 # dotfiles
 
-![alt text](https://github.com/Omnicrash/dotfiles/raw/master/docs/terminal.png)
+![Terminal](docs/terminal.png?raw=true)
