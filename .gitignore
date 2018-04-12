@@ -1,7 +1,10 @@
-*
-!*/
+# Exclude everything in root by default
+/*
 
+# Repo settings
 !.gitignore
+!.gitmodules
+
 !.bashrc
 !.dircolors
 !.gitconfig
