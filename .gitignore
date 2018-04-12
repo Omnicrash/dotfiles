@@ -13,5 +13,6 @@
 !.Xdefaults
 !.XWinrc
 
-!bin/*
-!.urxvt/ext/*
+!bin/
+!.urxvt/ext/
+!.tmux/

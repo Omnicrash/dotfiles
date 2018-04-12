@@ -18,8 +18,7 @@ URxvt*scrollWithBuffer: false
 URxvt*skipScroll: false
 
 ! Extensions
-!URxvt.perl-ext-common: clipboard,url-select,keyboard-select
-!URxvt.perl-ext:
+URxvt.perl-ext:
 URxvt.perl-ext-common: default,matcher,keyboard-select
 
 ! URL matching
@@ -147,3 +146,4 @@ URxvt*highlightColor:            #214283
 *color19:                        #49483e
 *color20:                        #a59f85
 *color21:                        #f5f4f1
+
