@@ -126,6 +126,7 @@ alias log='git log --graph --decorate --abbrev-commit'
 alias pull='git pull --rebase --autostash'
 
 push() {
+    git status -s
     if [ -z "$1" ]; then
         git push
     else
@@ -133,10 +134,10 @@ push() {
         git push
     fi
 }
-
+ 
 pushall() {
     git add .
-    git status
+    git status -s
     if [ -z "$1" ]; then
         echo -ne "Commit message: "
         read commitmsg
@@ -152,7 +153,7 @@ pushall() {
 }
 
 alias rebase='git rebase --autostash'
-alias status='git status'
+alias status='git status -s'
 
 add() {
     if [ -z "$1" ]; then
