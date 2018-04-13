@@ -108,6 +108,8 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias user="su -ls ${SHELL}"
+
 # windows
 alias web='cmd.exe /c start'
 alias toast='powershell.exe -command New-BurntToastNotification'
@@ -122,7 +124,33 @@ alias qsplit='tmux split-window -h && tmux selectp -t 0 && tmux split-window -v 
 # git shortcuts
 alias log='git log --graph --decorate --abbrev-commit'
 alias pull='git pull --rebase --autostash'
-alias push='git push'
+
+push() {
+    if [ -z "$1" ]; then
+        git push
+    else
+        git commit -m "$1"
+        git push
+    fi
+}
+
+pushall() {
+    git add .
+    git status
+    if [ -z "$1" ]; then
+        echo -ne "Commit message: "
+        read commitmsg
+        if [ -z "$commitmsg" ]; then
+            echo "No commit message provided; aborting..."
+        else
+            git commit -m "$commitmsg"
+        fi
+    else
+        git commit -m "$1"
+    fi
+    git push
+}
+
 alias rebase='git rebase --autostash'
 alias status='git status'
 
