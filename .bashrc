@@ -124,6 +124,7 @@ alias qsplit='tmux split-window -h && tmux selectp -t 0 && tmux split-window -v 
 # git shortcuts
 alias log='git log --graph --decorate --abbrev-commit'
 alias pull='git pull --rebase --autostash'
+alias gdiff='git diff'
 
 push() {
     git status -s
@@ -161,6 +162,7 @@ add() {
     else
         git add $1
     fi
+    git status -s
 }
 
 commit() {
@@ -274,26 +276,36 @@ export RUNLEVEL=3
 xset +fp "C:\program Files\VcXsrv\fonts\profont-x11" >/dev/null
 xset fp rehash >/dev/null
 
+# Setup dotnet core
+export DOTNET_CLI_TELEMETRY_OPTOUT="1"
+
 # Setup PATH
 PATH=$PATH:$HOME/bin
 
-# Theme: Monokai - Wimer Hazenberg (http://www.monokai.nl)
-color00="272822" # Base 00 - Black
-color01="f92672" # Base 08 - Red
-color02="a6e22e" # Base 0B - Green
+# Theme: Chronokai
+color00="383830" # Base 00 - Black
+color08="75715E" # Base 03 - Bright Black
+
+color01="E21F17" # Base 08 - Red
+color09="f92672" # Base 08 - Bright Red
+
+color02="96C71D" # Base 0B - Green
+color10="A6E22E" # Base 0B - Bright Green
+
 color03="F5871F" # Base 0A - Yellow
-color04="66d9ef" # Base 0D - Blue
-color05="ae81ff" # Base 0E - Magenta
-color06="a1efe4" # Base 0C - Cyan
-color07="f8f8f2" # Base 05 - White
-color08="75715e" # Base 03 - Bright Black
-color09=$color01 # Base 08 - Bright Red
-color10=$color02 # Base 0B - Bright Green
 color11="FFC66D" # Base 0A - Bright Yellow
-color12=$color04 # Base 0D - Bright Blue
-color13=$color05 # Base 0E - Bright Magenta
-color14=$color06 # Base 0C - Bright Cyan
-color15="f9f8f5" # Base 07 - Bright White
+
+color04="1785E2" # Base 0D - Blue
+color12="0DCBF9" # Base 0D - Bright Blue
+
+color05="8B5EE5" # Base 0E - Magenta
+color13="AE81FF" # Base 0E - Bright Magenta
+
+color06="00DCDC" # Base 0C - Cyan
+color14="A1EFE4" # Base 0C - Bright Cyan
+
+color07="D8D8D4" # Base 05 - White
+color15="F8F8F2" # Base 07 - Bright White
 
 # 16 color space
 echo -e "\e]P0$color00" >/dev/null

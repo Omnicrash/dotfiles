@@ -80,39 +80,46 @@ URxvt.inheritPixmap: false
 !Scratchpad.foreground: white
 !Scratchpad.background: [75]#000033
 
-! Black
-!*color0: #000000
-!*color8: #555555
-! Red
-!*color1: #AA0000
-!*color9: #FF5555
-! Green
-!*color2: #00AA00
-!*color10: #55FF55
-! Yellow
-*color3: #F5871F
-*color11: #FFC66D
-! Blue
-!*color4: #0000AA
-!*color12: #5555FF
-! Magenta
-!*color5: #AA00AA
-!*color13: #FF55FF
-! Cyan
-!*color6: #00AAAA
-!*color14: #55FFFF
-! White
-!*color7: #AAAAAA
-!*color15: #FFFFFF
 
-*fading: 10
-*fadeColor: #272822
+! Theme: Chronokai
+
+! Black
+*color0:  #383830
+*color8:  #75715E
+
+! Red
+*color1:  #E21F17
+*color9:  #F92672
+
+! Green
+*color2:  #96C71D
+*color10: #A6E22E
+
+! Yellow
+*color3:  #F5871F
+*color11: #FFC66D
+
+! Blue
+*color4:  #1785E2
+*color12: #0DCBF9
+
+! Magenta
+*color5:  #8B5EE5
+*color13: #AE81FF
+
+! Cyan
+*color6:  #00DCDC
+*color14: #A1EFE4
+
+! White
+*color7:  #D8D8D4
+*color15: #F8F8F2
+
+!*fading: 10
+!*fadeColor: #272822
 !*cursorColor: #93a1a1
 !*pointerColorBackground: #586e75
 !*pointerColorForeground: #93a1a1
-
-! Base16 Monokai
-! Scheme: Wimer Hazenberg (http://www.monokai.nl)
 
 *background:                     #272822
 *foreground:                     #f8f8f2
@@ -123,22 +130,22 @@ URxvt*scrollColor:               #f8f8f2
 URxvt*highlightColor:            #214283
 !URxvt*highlightTextColor:        #a59f85
 
-*color0:                         #272822
-*color1:                         #f92672
-*color2:                         #a6e22e
+!*color0:                         #272822
+!*color1:                         #f92672
+!*color2:                         #a6e22e
 !*color3:                         #f4bf75
-*color4:                         #66d9ef
-*color5:                         #ae81ff
-*color6:                         #a1efe4
-*color7:                         #f8f8f2
-*color8:                         #75715e
-*color9:                         #f92672
-*color10:                        #a6e22e
+!*color4:                         #66d9ef
+!*color5:                         #ae81ff
+!*color6:                         #a1efe4
+!*color7:                         #f8f8f2
+!*color8:                         #75715e
+!*color9:                         #f92672
+!*color10:                        #a6e22e
 !*color11:                        #f4bf75
-*color12:                        #66d9ef
-*color13:                        #ae81ff
-*color14:                        #a1efe4
-*color15:                        #f9f8f5
+!*color12:                        #66d9ef
+!*color13:                        #ae81ff
+!*color14:                        #a1efe4
+!*color15:                        #f9f8f5
 
 *color16:                        #fd971f
 *color17:                        #cc6633
@@ -146,4 +153,3 @@ URxvt*highlightColor:            #214283
 *color19:                        #49483e
 *color20:                        #a59f85
 *color21:                        #f5f4f1
-
