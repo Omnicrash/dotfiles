@@ -260,11 +260,15 @@ function parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
+#TODO: Use color names
+
 #export PS1="\[$MAGENTA\]\u\[$WHITE\]@\[$ORANGE\]\h\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" | \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n${debian_chroot:+($debian_chroot)}\w\$ \[$RESET\]"
 #export PS2="\[$ORANGE\] \[$RESET\]"
 #export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \":\")\$(parse_git_branch)\$ "
 #export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;35m\]\[\$(parse_git_branch)\[\033[00m\]\]\$ "
-export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[33m\]<\$(parse_git_branch)>\[\033[01;34m\]\w\[\033[00m\]\$ "
+export PS1="\[\033[01;30m\][\t] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00;32m\]@\[\033[01;32m\]\h\[\033[00;37m\]:\[\033[00;33m\]<\$(parse_git_branch)>\[\033[01;34m\]\w\[\033[00m\]\$ "
+
+#TODO: PS2
 
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/source"
@@ -289,6 +293,7 @@ color08="75715E" # Base 03 - Bright Black
 color01="E21F17" # Base 08 - Red
 color09="f92672" # Base 08 - Bright Red
 
+#TODO: More contrast in dark green
 color02="96C71D" # Base 0B - Green
 color10="A6E22E" # Base 0B - Bright Green
 
