@@ -108,8 +108,8 @@ URxvt.inheritPixmap: false
 *color13: #AE81FF
 
 ! Cyan
-*color6:  #00DCDC
-*color14: #A1EFE4
+*color6:  #1AAAB2
+*color14: #00DCDC
 
 ! White
 *color7:  #D8D8D4

@@ -301,8 +301,8 @@ color12="0DCBF9" # Base 0D - Bright Blue
 color05="8B5EE5" # Base 0E - Magenta
 color13="AE81FF" # Base 0E - Bright Magenta
 
-color06="00DCDC" # Base 0C - Cyan
-color14="A1EFE4" # Base 0C - Bright Cyan
+color06="1AAAB2" # Base 0C - Cyan
+color14="00DCDC" # Base 0C - Bright Cyan
 
 color07="D8D8D4" # Base 05 - White
 color15="F8F8F2" # Base 07 - Bright White
