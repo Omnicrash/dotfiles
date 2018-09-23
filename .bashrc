@@ -9,9 +9,13 @@ case $- in
 esac
 
 # Launch tmux
+#TMUXLINE='neofetch --ascii_distro 'linux' --colors 3 7 3 3 3 7 --underline_char " "; bash'
+
 #[[ -z "$TMUX" ]] && exec tmux
 if [[ -z "$TMUX" ]] ;then
-    ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+    ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a detached session
+    # Set up a future session for quick launch
+    tmux -2 new-session -d 'neofetch --ascii_distro 'linux' --colors 3 7 3 3 3 7 --underline_char " "; bash' >/dev/null
     if [[ -z "$ID" ]] ;then # if not available create a new one
         exec tmux -2 new-session 'neofetch --ascii_distro 'linux' --colors 3 7 3 3 3 7 --underline_char " "; bash' >/dev/null
         exit 0
@@ -124,7 +128,11 @@ alias qsplit='tmux split-window -h && tmux selectp -t 0 && tmux split-window -v 
 # git shortcuts
 alias log='git log --graph --decorate --abbrev-commit'
 alias pull='git pull --rebase --autostash'
-alias gdiff='git diff'
+alias gdiff='git diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"'
+alias checkout='git checkout'
+alias merge='git merge --no-ff'
+
+#TODO: Only show commit prompt when there is something to push
 
 push() {
     git status -s
@@ -193,7 +201,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#Aliases
+# Aliases
 alias vgup="vagrant up"
 alias vgssh="vagrant ssh"
 alias vghalt="vagrant halt"
@@ -273,9 +281,11 @@ export PS1="\[\033[01;30m\][\t] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/source"
 export VAGRANT_WSL_DISABLE_VAGRANT_HOME="1"
+export VAGRANT_HOME="~/.vagrant.d"
 
 # Setup X11
-export DISPLAY=:0 
+#export DISPLAY=:0 
+export DISPLAY=localhost:0.0
 export RUNLEVEL=3
 xset +fp "C:\program Files\VcXsrv\fonts\profont-x11" >/dev/null
 xset fp rehash >/dev/null

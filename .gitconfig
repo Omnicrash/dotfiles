@@ -7,5 +7,8 @@
     autoclean = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
     update = pull --rebase --autostash
     updev = rebase develop --autostash
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
 [log]
 	decorate = auto
+[core]
+	autocrlf = false
