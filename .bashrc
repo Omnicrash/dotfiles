@@ -115,26 +115,29 @@ alias l='ls -CF'
 alias user="su -ls ${SHELL}"
 
 # windows
-alias web='cmd.exe /c start'
+alias web='wslview'
+export BROWSER='wslview'
 alias toast='powershell.exe -command New-BurntToastNotification'
 
 # tmux/terminal shortcuts
-alias new='urxvtc'
+#TODO: Launch tmux if not running for each of these
+alias new='urxvt -e bash -c "tmux"'
 alias detach='tmux detach'
+alias attach='tmux attach'
 alias vsplit='tmux split-window -h && tmux selectp -t 1 && tmux split-window -v && tmux selectp -t 0'
 alias hsplit='tmux split-window -v && tmux selectp -t 1 && tmux split-window -h && tmux selectp -t 0'
 alias qsplit='tmux split-window -h && tmux selectp -t 0 && tmux split-window -v && tmux selectp -t 2 && tmux split-window -v && tmux selectp -t 0'
 
 # git shortcuts
 alias log='git log --graph --decorate --abbrev-commit'
-alias pull='git pull --rebase --autostash'
+alias gull='git pull --rebase --autostash'
 alias gdiff='git diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"'
 alias checkout='git checkout'
 alias merge='git merge --no-ff'
 
 #TODO: Only show commit prompt when there is something to push
 
-push() {
+gush() {
     git status -s
     if [ -z "$1" ]; then
         git push
@@ -144,7 +147,7 @@ push() {
     fi
 }
  
-pushall() {
+gushall() {
     git add .
     git status -s
     if [ -z "$1" ]; then
@@ -175,6 +178,10 @@ add() {
 
 commit() {
     git commit -m "$1"
+}
+
+amend() {
+    git commit --amend
 }
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -287,7 +294,7 @@ export VAGRANT_HOME="~/.vagrant.d"
 #export DISPLAY=:0 
 export DISPLAY=localhost:0.0
 export RUNLEVEL=3
-xset +fp "C:\program Files\VcXsrv\fonts\profont-x11" >/dev/null
+xset +fp "C:\fonts\profont-x11" >/dev/null
 xset fp rehash >/dev/null
 
 # Setup dotnet core
